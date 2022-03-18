@@ -1,0 +1,23 @@
+.historyContainer{
+    display: flex;
+    justify-content: space-between;
+    color: #929caa;
+    .historyIco{
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        cursor: default;
+    }
+
+    .operationResult{
+        display: flex;
+        align-items: right;
+        justify-content: flex-end;
+        width: 100%;
+        height: 100%;
+        cursor: default;
+    }
+}

@@ -1,0 +1,16 @@
+.screenContainer {
+  height: 72px;
+  display: block;
+  border: 1px solid #3c4043;
+  border-radius: 8px;
+  margin: auto;
+  padding: 10px 14px 0 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  &:hover{
+    background-color: #2e2f33;
+  }
+  &.active{
+    border-color: #447296;
+  }
+}
