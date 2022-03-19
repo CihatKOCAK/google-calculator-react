@@ -1,0 +1,48 @@
+table {
+  table-layout: fixed;
+  width: 100%;
+  color: #e8eaed;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  tbody {
+    tr {
+      td {
+        div {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 10px;
+          cursor: pointer;
+          border-radius: 4px;
+          margin: 1px;
+          &.key-ops {
+            background-color: #5f6368;
+          }
+          &.key-num {
+            background-color: #3c4043;
+          }
+          &.key-equal {
+            background-color: #8ab5f9;
+            color: #000;
+          }
+          &.key-rad-deg {
+            background-color: #5e6268;
+            justify-content: space-between;
+            padding: 10px 30px;
+            span {
+              color: #9aa0a6;
+            }
+            .active {
+              color: #fff;
+            }
+          }
+          &.bold {
+            font-weight: bold;
+          }
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.171);
+          }
+        }
+      }
+    }
+  }
+}
