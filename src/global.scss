@@ -16,6 +16,15 @@ html[data-theme="dark"] {
   --btnNumber: #3c4043;
   --btnEqual: #8ab5f9;
   --btnHover: rgba(255, 255, 255, 0.171);
+
+  --screenBorder: #b4a6a6;
+  --screenHover: #2e2f33;
+  --screenActiveBorder: #447296;
+
+  --historyPanelBg: rgba(33, 32, 36, 255);
+  --historyPanelText: #8ab4f8;
+  --historyPanelBorder: #9aa0a6;
+  --historyPanelHover: #687a9638;
 }
 html[data-theme="white"] {
   --textColor: rgb(48, 44, 44);
@@ -26,4 +35,13 @@ html[data-theme="white"] {
   --btnNumber: #f1f3f4;
   --btnEqual: #8ab5f9;
   --btnHover: rgba(143, 141, 141, 0.397);
+
+  --screenBorder: #b4a6a6;
+  --screenHover: #fff;
+  --screenActiveBorder: #447296;
+
+  --historyPanelBg: #fff;
+  --historyPanelText: #1a73e8;
+  --historyPanelBorder: #fff;
+  --historyPanelHover: #ebebeb;
 }

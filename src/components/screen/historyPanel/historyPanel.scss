@@ -7,11 +7,11 @@
   left: 30px;
   width: 448px;
   height: 258px;
-  background-color: rgba(33, 32, 36, 255);
+  background-color: var(--historyPanelBg);
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  color: #8ab4f8;
+  color: var(--historyPanelText) ;
   table {
     border-radius: 4px;
     padding: 6px 12px;
@@ -20,18 +20,17 @@
     tr {
       td {
         text-align: center;
-        color: #9aa0a6;
+        color: var(--historyPanelText);
         min-width: 32px;
         &:first-child,
         &:last-child {
           min-width: 32px;
           max-width: 260px;
-          color: #8ab4f8;
-          border: #9aa0a6 solid 1px;
+          border: var(--historyPanelBorder) solid 1px;
           border-radius: 4px;
           padding: 6px 12px;
           &:hover{
-            background-color: #687a9638;
+            background-color: var(--historyPanelHover);
           }
         }
       }
