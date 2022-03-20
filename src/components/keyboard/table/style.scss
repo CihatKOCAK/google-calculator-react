@@ -2,7 +2,6 @@
 table {
   table-layout: fixed;
   width: 100%;
-  color: #e8eaed;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   tbody {
     tr {
@@ -16,31 +15,31 @@ table {
           border-radius: 4px;
           margin: 1px;
           &.key-ops {
-            background-color: #5f6368;
+            background-color: var(--btnKeyOps);
           }
           &.key-num {
-            background-color: #3c4043;
+            background-color: var(--btnNumber);
           }
           &.key-equal {
-            background-color: #8ab5f9;
+            background-color: var(--btnEqual);
             color: #000;
           }
           &.key-rad-deg {
-            background-color: #5e6268;
+            background-color: var(--btnKeyOps);
             justify-content: space-between;
             padding: 10px 30px;
             span {
               color: #9aa0a6;
             }
             .active {
-              color: #fff;
+              color: var(--textColor);
             }
           }
           &.bold {
             font-weight: bold;
           }
           &:hover {
-            background-color: rgba(255, 255, 255, 0.171);
+            background-color: var(--btnHover);
           }
         }
       }

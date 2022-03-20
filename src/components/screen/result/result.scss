@@ -1,5 +1,6 @@
+@import '../../../global.scss';
 .resultContainer {
   text-align: right;
   font-size: 30px;
-  color: #fff;
+  color: var(--textColor);
 }

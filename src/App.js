@@ -14,6 +14,10 @@ function App() {
     }
   }, [theme]);
 
+  useEffect(() => {
+    window.sessionStorage.setItem("theme", theme);
+  }, [theme]);
+
   return (
     <div className="mainContainer">
       <Screen />

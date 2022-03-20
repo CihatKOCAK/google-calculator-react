@@ -10,7 +10,6 @@ function Screen() {
       className={selectedScreen ? "screenContainer" : "screenContainer active"}
       onClick={() => setSelectedScreen(!selectedScreen)}
     >
-      {" "}
       <History />
       <Result />
     </div>

@@ -11,9 +11,19 @@ html[data-theme="dark"] {
   --textColor: #fff;
   --lightBtn: rgba(219, 220, 226, 0.966);
   --backGroundColor: rgba(33, 32, 36, 255);
+
+  --btnKeyOps: #5f6368;
+  --btnNumber: #3c4043;
+  --btnEqual: #8ab5f9;
+  --btnHover: rgba(255, 255, 255, 0.171);
 }
 html[data-theme="white"] {
   --textColor: rgb(48, 44, 44);
   --lightBtn: rgb(27, 70, 23);
   --backGroundColor: rgba(255, 255, 255, 0.781);
+
+  --btnKeyOps: #dadce0;
+  --btnNumber: #f1f3f4;
+  --btnEqual: #8ab5f9;
+  --btnHover: rgba(143, 141, 141, 0.397);
 }
