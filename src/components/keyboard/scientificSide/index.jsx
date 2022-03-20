@@ -4,7 +4,6 @@ import './style.scss'
 import { scientificData } from './Data'
 
 function ScientificSide() {
-  console.log(scientificData.keys)
   return (
     <div className='containerScientificSide'>
      <Table data={scientificData.keys}/>

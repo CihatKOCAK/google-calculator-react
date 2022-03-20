@@ -3,7 +3,6 @@ import './historyPanel.scss'
 import { AiOutlineHistory } from "react-icons/ai";
 
 function HistoryPanel({ setHistoryShow, historyShow }) {
-  console.log(historyShow)
   return (
     <>
       {historyShow && <div className="containerHistoryPanel noselect" >
