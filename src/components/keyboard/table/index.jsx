@@ -3,7 +3,7 @@ import './style.scss'
 
 function Table(props) {
     return (
-        <table>
+        <table className='noselect'>
             <tbody>
                 {props.data.map((row, index) => {
                     return (
@@ -12,11 +12,12 @@ function Table(props) {
                                 return (
 
                                     column.key2 ? < td colSpan={2} key={column.key} >
-                                        <div className={ column.className} > 
-                                            <input type="checkbox" />
-                                                <span>{column.key}</span>
-                                                <span>|</span>
-                                                <span>{column.key2}</span>
+                                        <div className={column.className} >
+                                            {/* <input type="checkbox" /> */}
+                                            <span className='active'>{column.key}</span>
+                                            <span>|</span>
+                                            <span>{column.key2}</span>
+
                                         </div >
                                     </td> :
                                         < td key={column.key} >

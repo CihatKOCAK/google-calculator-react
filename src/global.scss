@@ -1,0 +1,19 @@
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+html[data-theme="dark"] {
+  --textColor: #fff;
+  --lightBtn: rgba(219, 220, 226, 0.966);
+  --backGroundColor: rgba(33, 32, 36, 255);
+}
+html[data-theme="white"] {
+  --textColor: rgb(48, 44, 44);
+  --lightBtn: rgb(27, 70, 23);
+  --backGroundColor: rgba(255, 255, 255, 0.781);
+}

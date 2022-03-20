@@ -4,12 +4,13 @@ import Result from "./result/Result";
 import "./style.scss";
 
 function Screen() {
-  const [selected, setSelected] = useState(false);
+  const [selectedScreen, setSelectedScreen] = useState(false);
   return (
     <div
-      className={selected ? "screenContainer" : "screenContainer active"}
-      onClick={() => setSelected(!selected)}
+      className={selectedScreen ? "screenContainer" : "screenContainer active"}
+      onClick={() => setSelectedScreen(!selectedScreen)}
     >
+      {" "}
       <History />
       <Result />
     </div>
