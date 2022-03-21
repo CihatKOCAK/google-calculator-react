@@ -2,9 +2,10 @@ import React from 'react'
 import './historyPanel.scss'
 import { AiOutlineHistory } from "react-icons/ai";
 
-function HistoryPanel({ setHistoryShow, historyShow, historyOperations, setScreen }) {
+function HistoryPanel({ setHistoryShow, historyShow, historyOperations, setScreen,  setActiveOperation }) {
   const setScreenVal = (screen) => {
     setHistoryShow(false);
+    setActiveOperation(true);
     setScreen(screen);
   }
   return (

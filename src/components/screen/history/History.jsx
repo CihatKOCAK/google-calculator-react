@@ -3,9 +3,8 @@ import './history.scss'
 import { AiOutlineHistory } from "react-icons/ai";
 import HistoryPanel from '../historyPanel/HistoryPanel';
 
-function History({ historyOperations, setScreen }) {
+function History({ historyOperations, setScreen, setActiveOperation }) {
   const [historyShow, setHistoryShow] = useState(false);
-  console.log()
   return (
     <>
       <div className='historyContainer'>
@@ -18,7 +17,11 @@ function History({ historyOperations, setScreen }) {
           }</span>
         </div>
       </div>
-      <HistoryPanel historyShow={historyShow} setHistoryShow={setHistoryShow} historyOperations={historyOperations} setScreen={setScreen} />
+      <HistoryPanel historyShow={historyShow}
+        setHistoryShow={setHistoryShow}
+        historyOperations={historyOperations}
+        setScreen={setScreen}
+        setActiveOperation={setActiveOperation} />
     </>
   )
 }
