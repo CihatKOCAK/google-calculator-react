@@ -3,7 +3,7 @@ import History from "./history/History";
 import Result from "./result/Result";
 import "./style.scss";
 
-function Screen({ historyOperations, screen }) {
+function Screen({ historyOperations, screen, setScreen }) {
   const [selectedScreen, setSelectedScreen] = useState(false);
 
   return (
@@ -11,7 +11,7 @@ function Screen({ historyOperations, screen }) {
       className={selectedScreen ? "screenContainer" : "screenContainer active"}
       onClick={() => setSelectedScreen(!selectedScreen)}
     >
-      <History historyOperations={historyOperations} />
+      <History historyOperations={historyOperations} setScreen={setScreen} />
       <Result screen={screen} />
     </div>
   );

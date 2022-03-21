@@ -29,7 +29,7 @@ export default function controllerCalculate(
       setScreen(screen.slice(0, -1));
     } else if (value === "=" || value === "Enter") {
       setActiveOperation(false);
-      let history = { operation: screen, result: eval(screen) };
+      let history = { operation: screen, result: eval(screen).toString() };
       setHistoryOperations([...historyOperations, history]);
       setScreen(eval(screen).toString());
     } else if (value === "." || value === ",") {

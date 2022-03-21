@@ -46,7 +46,7 @@ function App() {
       tabIndex={0}
       onKeyDownCapture={(e) => handleKeyPress(e.key)}
     >
-      <Screen historyOperations={historyOperations} screen={screen} />
+      <Screen historyOperations={historyOperations} screen={screen} setScreen = {setScreen} />
       <Keyboard
         setScreen={setScreen}
         screen={screen}
