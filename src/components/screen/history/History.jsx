@@ -3,19 +3,22 @@ import './history.scss'
 import { AiOutlineHistory } from "react-icons/ai";
 import HistoryPanel from '../historyPanel/HistoryPanel';
 
-function History() {
+function History({ historyOperations }) {
   const [historyShow, setHistoryShow] = useState(false);
+  console.log()
   return (
     <>
       <div className='historyContainer'>
-        <AiOutlineHistory className='historyIco' 
-        size={30}
-         onClick={() => setHistoryShow(!historyShow)} />
+        <AiOutlineHistory className='historyIco'
+          size={30}
+          onClick={() => setHistoryShow(!historyShow)} />
         <div className='operationResult'>
-          <span className='noselect'>2+2=</span>
+        <span className='noselect'>{
+          historyOperations.length > 0 ? historyOperations[historyOperations.length - 1].operation : ''
+        }</span>
         </div>
       </div>
-      <HistoryPanel historyShow={historyShow} setHistoryShow={setHistoryShow} />
+      <HistoryPanel historyShow={historyShow} setHistoryShow={setHistoryShow} historyOperations = {historyOperations} />
     </>
   )
 }

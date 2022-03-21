@@ -25,6 +25,8 @@ html[data-theme="dark"] {
   --historyPanelText: #8ab4f8;
   --historyPanelBorder: #9aa0a6;
   --historyPanelHover: #687a9638;
+
+  --scrollbarColor: #252527;
 }
 html[data-theme="white"] {
   --textColor: rgb(48, 44, 44);
@@ -41,7 +43,9 @@ html[data-theme="white"] {
   --screenActiveBorder: #447296;
 
   --historyPanelBg: #fff;
-  --historyPanelText: #1a73e8;
+  --historyPanelText: #001988;
   --historyPanelBorder: #fff;
   --historyPanelHover: #ebebeb;
+
+  --scrollbarColor: #e4d8d8;
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import './historyPanel.scss'
 import { AiOutlineHistory } from "react-icons/ai";
 
-function HistoryPanel({ setHistoryShow, historyShow }) {
+function HistoryPanel({ setHistoryShow, historyShow, historyOperations }) {
   return (
     <>
       {historyShow && <div className="containerHistoryPanel noselect" >
@@ -10,21 +10,18 @@ function HistoryPanel({ setHistoryShow, historyShow }) {
         <div className='operationResult'>
           <table>
             <tbody>
-              <tr>
-                <td>2+687987676872</td>
-                <td>=</td>
-                <td>2+687987676872</td>
-              </tr>
-              <tr>
-                <td>2+2</td>
-                <td>=</td>
-                <td>4</td>
-              </tr>
-              <tr>
-                <td>2+2</td>
-                <td>=</td>
-                <td>4</td>
-              </tr>
+              {historyOperations.length > 0 ? historyOperations.map((operation, index) => {
+                return (
+                  <tr key={index}>
+                    <td>{operation.operation}</td>
+                    <td>=</td>
+                    <td>{operation.result}</td>
+                  </tr>
+                )
+              }) :
+                <tr>
+                  <td>You have no history</td>
+                </tr>}
             </tbody>
           </table>
         </div>

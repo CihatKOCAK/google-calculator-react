@@ -2,34 +2,59 @@ import Keyboard from "./components/keyboard";
 import Screen from "./components/screen";
 import "./app.scss";
 import ThemeToggle from "./components/themeToggle";
-import { useEffect, useState } from "react";
-import { localData } from "./storageCreateData";
+import React, { useEffect, useState } from "react";
+import { getStorage, setStore } from "./controllerStorage";
+import controllerCalculate from "./controllerCalculate";
 
 function App() {
   const [theme, setTheme] = useState(true);
+  const [historyOperations, setHistoryOperations] = useState([]);
+  const [activeOperation, setActiveOperation] = useState(true);
+  const [screen, setScreen] = useState("");
 
   useEffect(() => {
-    if (localStorage.getItem("calculate")) {
-      let myData = JSON.parse(localStorage.getItem("calculate"));
-      setTheme(myData.theme);
-    } else {
-      localStorage.setItem("calculate", JSON.stringify(localData));
-    }
+    setTheme(getStorage().theme);
+    setHistoryOperations(getStorage().historyOperations);
   }, []);
+
+  const handleKeyPress = (key) => {
+    controllerCalculate(
+      key.toString(),
+      screen,
+      setScreen,
+      setHistoryOperations,
+      historyOperations,
+      activeOperation,
+      setActiveOperation
+    );
+  };
 
   useEffect(() => {
     theme
       ? document.documentElement.setAttribute("data-theme", "dark")
       : document.documentElement.setAttribute("data-theme", "white");
-    let newData = JSON.parse(localStorage.getItem("calculate"));
-    newData.theme = theme;
-    localStorage.setItem("calculate", JSON.stringify(newData));
+    setStore(theme, "theme");
   }, [theme]);
 
+  useEffect(() => {
+    setStore(historyOperations, "historyOperations");
+  }, [historyOperations]);
+
   return (
-    <div className="mainContainer">
-      <Screen />
-      <Keyboard />
+    <div
+      className="mainContainer"
+      tabIndex={0}
+      onKeyDownCapture={(e) => handleKeyPress(e.key)}
+    >
+      <Screen historyOperations={historyOperations} screen={screen} />
+      <Keyboard
+        setScreen={setScreen}
+        screen={screen}
+        setHistoryOperations={setHistoryOperations}
+        historyOperations={historyOperations}
+        activeOperation={activeOperation}
+        setActiveOperation={setActiveOperation}
+      />
       <ThemeToggle theme={theme} setTheme={setTheme} />
     </div>
   );
